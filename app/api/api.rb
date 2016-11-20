@@ -1,3 +1,6 @@
 class API < Grape::API
-  mount V1::Elections
+
+  helpers ::Helpers::Authentication
+
+  mount V1::Base
 end

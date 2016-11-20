@@ -3,7 +3,7 @@ class CreateElections < ActiveRecord::Migration[5.0]
     create_table :elections do |t|
       t.string :name
       t.string :status
-      t.integer :owner_id
+      t.integer :user_id
 
       t.timestamps
     end

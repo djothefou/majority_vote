@@ -1,15 +1,11 @@
 class V1::Elections < Grape::API
-  version 'v1', using: :path
-  format :json
-
-  helpers V1::Helpers::Default
 
   resource :elections do
     desc "Return list of elections"
     # Récupération de la collection de toutes les voitures grâce à ActiveRecord
     get do
       authenticate!
-      Election.all
+      current_user.elections
     end
 
     desc "Return a election"
@@ -19,7 +15,7 @@ class V1::Elections < Grape::API
     end
     route_param :id do
       get do
-        Election.find(params[:id])
+        current_user.elections.find(params[:id])
       end
     end
   end

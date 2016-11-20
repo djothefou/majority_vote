@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20161120095004) do
   create_table "elections", force: :cascade do |t|
     t.string   "name"
     t.string   "status"
-    t.integer  "owner_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,4 +1,4 @@
-module V1::Helpers::Default
+module Helpers::Authentication
   extend Grape::API::Helpers
 
   def current_user
