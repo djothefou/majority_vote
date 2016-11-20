@@ -23,6 +23,13 @@ gem 'puma', '~> 3.0'
 gem 'awesome_print'
 gem 'seed_dump'
 
+
+# GRAPE
+gem 'grape'
+# https://github.com/ruby-grape/grape ====> Additionally, if the version of your Rails is 4.0+ and the application uses the default model layer of ActiveRecord, you will want to use the hashie-forbidden_attributes gem. This gem disables the security feature of strong_params at the model layer, allowing you the use of Grape's own params validation instead.
+gem 'hashie-forbidden_attributes'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
